@@ -94,7 +94,7 @@ class Form extends React.Component {
 	render() {
 		if(this.state.form === "reg") {
 			return (
-        <container className="d-flex align-items-center">
+        <div className="d-flex align-items-center">
           <form>
             <div className="forms">
               <span className="active" onClick={this.changeForm.bind(this)}>
@@ -150,12 +150,12 @@ class Form extends React.Component {
               Sign Up
             </div>
           </form>
-        </container>
+        </div>
       );
 		}
 		else {
 			return (
-        <container className="d-flex align-items-center">
+        <div className="d-flex align-items-center">
           <form>
             <div className="forms">
               <span onClick={this.changeForm.bind(this)}>Sing Up</span>
@@ -188,7 +188,7 @@ class Form extends React.Component {
               Log In
             </div>
           </form>
-        </container>
+        </div>
       );	
 		}
 	}
