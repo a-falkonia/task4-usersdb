@@ -95,7 +95,7 @@ app.post('/updateUser', (req, res) => {
 	db.User.find({ name: req.body.name })
 	.then(users => {
 		if (users.length > 0) {
-			users[0].Logdate = new Date()
+			users[0].logdate = new Date()
 			users[0].save()
 			res.send(true)
 			return
