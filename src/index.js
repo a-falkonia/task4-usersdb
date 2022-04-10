@@ -5,7 +5,7 @@ import UsersTable from './UsersTable.js'
 
 function App () {
 	let logged = (document.cookie.length > 0)
-	if (!logged) window.location.href = '/sign'
+	if (!logged) { return <Form /> };
 	return <UsersTable />
 }
 let root = document.createElement("div")
