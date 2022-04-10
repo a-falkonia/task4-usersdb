@@ -23,17 +23,19 @@ class Form extends React.Component {
 	validate() {
 		if (this.state.values.reg.pass === "" || this.state.values.reg.name === "" 
 			|| this.state.values.reg.email === "" || this.state.values.reg.repass === "") {
-			this.state.values.reg.error = <span>Не все поля заполнены</span>
+			this.state.values.reg.error = (
+        <span>Not all required fields have been entered</span>
+      );
 			this.forceUpdate()
 			return false
 		}
 		if (this.state.values.reg.name.length > 16) {
-			this.state.values.reg.error = <span>Имя не должно превышать длинну в 16 символов.</span>
+			this.state.values.reg.error = <span>The name should not be longer than 16 characters.</span>
 			this.forceUpdate()
 			return false
 		}
 		if (this.state.values.reg.pass !== this.state.values.reg.repass) {
-			this.state.values.reg.error = <span>Пароли не совпадают.</span>
+			this.state.values.reg.error = <span>Passwords don't match.</span>
 			this.forceUpdate()
 			return false
 		}
@@ -71,14 +73,14 @@ class Form extends React.Component {
 			})
 			.then((res) => {
 				if (res.data.length == 0) {
-					this.state.values.log.error = <span>Неверное имя пользователя или пароль.</span>
+					this.state.values.log.error = <span>Incorrect username or password</span>
 					this.forceUpdate()
 				}
 				else if (!res.data[0].blocked) {
 					axios.post('/updateUser', { name: this.state.values.log.name })
 					window.location.href = "/"
 				} 
-				else alert("Ваш аккаунт заблокирован!")
+				else alert("You have been blocked!")
 			})
 			.catch((err) => {
 				console.log(err)

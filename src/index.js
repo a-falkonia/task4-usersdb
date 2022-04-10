@@ -3,7 +3,7 @@ import React from 'react'
 import UsersTable from './UsersTable.js'
 
 function App () {
-	let logged = document.cookie.length > 0 ? true : false
+	let logged = (document.cookie.length > 0)
 	if (!logged) window.location.href = '/sign'
 	return <UsersTable />
 }

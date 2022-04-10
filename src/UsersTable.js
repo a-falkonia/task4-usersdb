@@ -122,9 +122,9 @@ class UsersTable extends React.Component {
 				  <thead>
 				    <tr>
 				      <th scope="col">#</th>
-				      <th scope="col">Name</th>
+				      <th scope="col">Username</th>
 				      <th scope="col">Email</th>
-				      <th scope="col">Reg Date</th>
+				      <th scope="col">Registration Date</th>
 				      <th scope="col">Login Date</th>
 				      <th scope="col">Status</th>
 				      <th scope="col"><input type="checkbox" onClick={this.selectAll.bind(this)}/> Select All</th>
