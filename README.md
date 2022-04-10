@@ -3,4 +3,5 @@
 Web-приложение, которое позволяет пользователям зарегистрироваться и аутентифицироваться. Неаутентифицированные пользователи не имеют доступа к управлению пользователями (могут достучаться только к форме регистрации или форме аутентификации).
 
 MongoDB, Express, React, Node.js, Bootstrap
-https://task4-usersdb.herokuapp.com/
+
+Deployed with Heroku: https://task4-usersdb.herokuapp.com/
