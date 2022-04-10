@@ -94,7 +94,7 @@ class Form extends React.Component {
 	render() {
 		if(this.state.form === "reg") {
 			return (
-        <container className="d-flex flex-column justify-content-center">
+        <container className="d-flex align-items-center">
           <form>
             <div className="forms">
               <span className="active" onClick={this.changeForm.bind(this)}>
@@ -155,7 +155,7 @@ class Form extends React.Component {
 		}
 		else {
 			return (
-        <container className="d-flex flex-column justify-content-center">
+        <container className="d-flex align-items-center">
           <form>
             <div className="forms">
               <span onClick={this.changeForm.bind(this)}>Sing Up</span>
