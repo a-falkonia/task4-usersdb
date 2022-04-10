@@ -16,7 +16,7 @@ form {
 	top: 5px;
 	right: 5px;
 }
-#logout:hover {
+#block:hover {
 	background: red;
 }
 .forms {
@@ -38,12 +38,7 @@ form {
 	margin-left: 20px;
 	height: 40px;
 }
-.toolbar button:hover {
-	background: red;
-}
-.toolbar button:last-child:hover {
-	background: green;
-}
+
 .error {
 	font-size: 14px;
 	color: red;

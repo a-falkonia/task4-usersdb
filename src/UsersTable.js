@@ -104,14 +104,14 @@ class UsersTable extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-					<button type="button" class="btn btn-secondary" id="logout" onClick={this.logout}>
+					<button type="button" class="btn btn-secondary" onClick={this.logout}>
 						Logout
 					</button>
 				<div className="toolbar">
 					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" onClick={this.deleteUsers.bind(this)}>
 					  Delete
 					</button>
-					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" onClick={this.blockUsers.bind(this)}>
+					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" id="block" onClick={this.blockUsers.bind(this)}>
 					  Block
 					</button>
 					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" onClick={this.unblockUsers.bind(this)}>
