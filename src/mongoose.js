@@ -13,8 +13,8 @@ mongoose.connect(
 let UserSchema = new mongoose.Schema({
   name: String,
   email: String,
-  Regdate: String,
-  Logdate: String,
+  regdate: String,
+  logdate: String,
   pass: String,
   blocked: Boolean,
 });

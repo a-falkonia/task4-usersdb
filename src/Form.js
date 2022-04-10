@@ -47,8 +47,8 @@ class Form extends React.Component {
 			axios.post('/user', {
 				name: this.state.values.reg.name,
 				email: this.state.values.reg.email,
-				Regdate: new Date(),
-				Logdate: 0,
+				regdate: new Date(),
+				logdate: 0,
 				pass: this.state.values.reg.pass,
 				blocked: false
 			})

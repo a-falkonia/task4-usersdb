@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import UsersTable from './UsersTable.js'
 
+
 function App () {
 	let logged = (document.cookie.length > 0)
 	if (!logged) window.location.href = '/sign'
