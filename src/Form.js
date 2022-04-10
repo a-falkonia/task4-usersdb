@@ -117,7 +117,7 @@ class Form extends React.Component {
 				    	<input type="password" className="form-control" id="repass" value={this.state.values.reg.repass} onInput={this.changeValue.bind(this)} />
 				  	</div>
 				  	<div className="error">{this.state.values.reg.error}</div>
-				  	<div onClick={this.send.bind(this)} className="btn btn-primary">Register</div>
+				  	<div onClick={this.send.bind(this)} className="btn btn-primary">Sign Up</div>
 				</form>
 			)
 		}

@@ -25,7 +25,7 @@ class UsersTable extends React.Component {
 		this.state.users = []
 		for (let i = 0; i < this.state.usersData.length; i++) {
 			this.state.users.push(<User name={this.state.usersData[i].name} email={this.state.usersData[i].email}
-			regDate={this.state.usersData[i].Regdate} logDate={this.state.usersData[i].Logdate}
+			regDate={this.state.usersData[i].regdate} logDate={this.state.usersData[i].logdate}
 			checked={this.state.usersData[i].checked} number={i + 1} change={this.select.bind(this)}
 			status={this.state.usersData[i].blocked} />)
 		}
