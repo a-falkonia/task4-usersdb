@@ -104,7 +104,7 @@ class UsersTable extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-					<button type="button" class="btn btn-secondary" onClick={this.logout}>
+					<button type="button" class="btn btn-secondary" id="logout" onClick={this.logout}>
 						Logout
 					</button>
 				<div className="toolbar">
