@@ -98,7 +98,7 @@ class UsersTable extends React.Component {
 	logout() {
 		axios.get('/logout')
 		.then((res) => {
-			window.location.href = "/sign"
+			window.location.href = "/"
 		})
 	}
 	render() {
