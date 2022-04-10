@@ -26,7 +26,7 @@ class UsersTable extends React.Component {
 		for (let i = 0; i < this.state.usersData.length; i++) {
 			this.state.users.push(<User name={this.state.usersData[i].name} email={this.state.usersData[i].email}
 			regDate={this.state.usersData[i].regdate} logDate={this.state.usersData[i].logdate}
-			checked={this.state.usersData[i].checked} number={i + 1} change={this.select.bind(this)}
+			checked={this.state.usersData[i].checked} number={i + 1} toggle={this.select.bind(this)}
 			status={this.state.usersData[i].blocked} />)
 		}
 		this.forceUpdate()
@@ -143,21 +143,28 @@ class User extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-	change(e) {
-		this.props.change(this.props.number - 1, e.target.checked)
+	toggle(e) {
+		this.props.toggle(this.props.number - 1, e.target.checked)
 	}
 	render() {
 		return (
-			<tr>
-				<th scope="row">{this.props.number}</th>
-				<td>{this.props.name}</td>
-				<td>{this.props.email}</td>
-				<td>{this.props.regDate}</td>
-				<td>{this.props.logDate == "0" ? "not logged in yet" : this.props.logDate}</td>
-				<td style={{ color: this.props.status ? "red" : "green" }}>{this.props.status ? "blocked" : "not blocked"}</td>
-				<td><input type="checkbox" checked={this.props.checked} onClick={this.change.bind(this)} /></td>
-			</tr>
-		)
+      <tr>
+        <th scope="row">{this.props.number}</th>
+        <td>{this.props.name}</td>
+        <td>{this.props.email}</td>
+        <td>{this.props.regDate}</td>
+        <td>{this.props.logDate ? this.props.logDate : "hasn't logged in yet"}</td>
+        <td>{this.props.status ? "blocked" : "not blocked"}
+        </td>
+        <td>
+          <input
+            type="checkbox"
+            checked={this.props.checked}
+            onClick={this.toggle.bind(this)}
+          />
+        </td>
+      </tr>
+    );
 		
 	}
 }

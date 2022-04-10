@@ -94,52 +94,102 @@ class Form extends React.Component {
 	render() {
 		if(this.state.form === "reg") {
 			return (
-				<form>
-					<div className="forms">
-						<span className="active" onClick={this.changeForm.bind(this)}>Sing Up</span>
-						<span onClick={this.changeForm.bind(this)}>Sing In</span>
-					</div>
-					<div className="mb-3">
-				    	<label className="form-label">Username</label>
-				    	<input type="text" className="form-control" id="name" value={this.state.values.reg.name} onInput={this.changeValue.bind(this)} />
-				  	</div>
-					<div className="mb-3">
-				    	<label className="form-label">Email address</label>
-				    	<input type="email" className="form-control" id="email" value={this.state.values.reg.email} onInput={this.changeValue.bind(this)} />
-				    	<div className="form-text">We'll never share your email with anyone else.</div>
-				  	</div>
-				  	<div className="mb-3">
-				    	<label className="form-label">Password</label>
-				    	<input type="password" className="form-control" id="pass" value={this.state.values.reg.pass} onInput={this.changeValue.bind(this)} />
-				  	</div>
-				  	<div className="mb-3">
-				    	<label className="form-label">Repeat Password</label>
-				    	<input type="password" className="form-control" id="repass" value={this.state.values.reg.repass} onInput={this.changeValue.bind(this)} />
-				  	</div>
-				  	<div className="error">{this.state.values.reg.error}</div>
-				  	<div onClick={this.send.bind(this)} className="btn btn-primary">Sign Up</div>
-				</form>
-			)
+        <container className="d-flex flex-column justify-content-center">
+          <form>
+            <div className="forms">
+              <span className="active" onClick={this.changeForm.bind(this)}>
+                Sing Up
+              </span>
+              <span onClick={this.changeForm.bind(this)}>Sing In</span>
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Username</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                value={this.state.values.reg.name}
+                onInput={this.changeValue.bind(this)}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email address</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                value={this.state.values.reg.email}
+                onInput={this.changeValue.bind(this)}
+              />
+              <div className="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="pass"
+                value={this.state.values.reg.pass}
+                onInput={this.changeValue.bind(this)}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Repeat Password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="repass"
+                value={this.state.values.reg.repass}
+                onInput={this.changeValue.bind(this)}
+              />
+            </div>
+            <div className="error">{this.state.values.reg.error}</div>
+            <div onClick={this.send.bind(this)} className="btn btn-primary">
+              Sign Up
+            </div>
+          </form>
+        </container>
+      );
 		}
 		else {
-			return(
-				<form>
-					<div className="forms">
-						<span onClick={this.changeForm.bind(this)}>Sing Up</span>
-						<span className="active" onClick={this.changeForm.bind(this)}>Sing In</span>
-					</div>
-					<div className="mb-3">
-					    <label className="form-label">Username</label>
-					    <input type="text" className="form-control" id="name" value={this.state.values.log.name} onInput={this.changeValue.bind(this)} />
-					</div>
-					<div className="mb-3">
-					    <label className="form-label">Password</label>
-					    <input type="password" className="form-control" id="pass" value={this.state.values.log.pass} onInput={this.changeValue.bind(this)} />
-					</div>
-					<div className="error">{this.state.values.log.error}</div>
-					<div onClick={this.send.bind(this)} className="btn btn-primary">Log In</div>
-				</form>
-			)	
+			return (
+        <container className="d-flex flex-column justify-content-center">
+          <form>
+            <div className="forms">
+              <span onClick={this.changeForm.bind(this)}>Sing Up</span>
+              <span className="active" onClick={this.changeForm.bind(this)}>
+                Sing In
+              </span>
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Username</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                value={this.state.values.log.name}
+                onInput={this.changeValue.bind(this)}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="pass"
+                value={this.state.values.log.pass}
+                onInput={this.changeValue.bind(this)}
+              />
+            </div>
+            <div className="error">{this.state.values.log.error}</div>
+            <div onClick={this.send.bind(this)} className="btn btn-primary">
+              Log In
+            </div>
+          </form>
+        </container>
+      );	
 		}
 	}
 }
