@@ -9,6 +9,6 @@ function App () {
 	return <UsersTable />
 }
 let root = document.createElement("div")
-root.setAttribute("id", "root2")
+root.setAttribute("id", "root")
 document.body.append(root)
 ReactDOM.render(<App />, root)

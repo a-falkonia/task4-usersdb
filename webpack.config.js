@@ -3,7 +3,7 @@ const path = require('path');
 
 
 module.exports = {
-  entry: { index: './src/index.js', sign: './src/sign.js' },
+  entry: { index: './src/index.js'},
   module: {
     rules: [
         {
