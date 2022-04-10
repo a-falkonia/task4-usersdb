@@ -153,9 +153,12 @@ class User extends React.Component {
         <td>{this.props.name}</td>
         <td>{this.props.email}</td>
         <td>{this.props.regDate}</td>
-        <td>{this.props.logDate ? this.props.logDate : "hasn't logged in yet"}</td>
-        <td>{this.props.status ? "blocked" : "not blocked"}
+        <td>
+          {this.props.logDate == "0"
+            ? "hasn't logged in yet"
+            : this.props.logDate}
         </td>
+        <td>{this.props.status ? "blocked" : "not blocked"}</td>
         <td>
           <input
             type="checkbox"
