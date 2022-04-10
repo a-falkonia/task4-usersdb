@@ -43,7 +43,6 @@ class UsersTable extends React.Component {
 			}
 		}
 		this.setUsers()
-		e.target.checked = false;
 	}
 	deleteUsers() {
 		for (let i = 0; i < this.state.usersData.length; i++) {
