@@ -16,6 +16,13 @@ form {
 	top: 5px;
 	right: 5px;
 }
+#logout:hover{
+	background: red;
+}
+#unblock:hover {
+	background: green;
+}
+
 #block:hover {
 	background: red;
 }

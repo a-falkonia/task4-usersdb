@@ -114,7 +114,7 @@ class UsersTable extends React.Component {
 					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" id="block" onClick={this.blockUsers.bind(this)}>
 					  Block
 					</button>
-					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" onClick={this.unblockUsers.bind(this)}>
+					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" id="unblock" onClick={this.unblockUsers.bind(this)}>
 					  Unblock
 					</button>
 				</div>
