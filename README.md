@@ -5,5 +5,3 @@ Web-приложение, которое позволяет пользовате
 MongoDB, Express, React, Node.js, Bootstrap
 
 Deployed with Heroku: https://task4-usersdb.herokuapp.com/
-
-Demo: https://youtu.be/D2eh1ZzXElQ
